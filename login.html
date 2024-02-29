@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Login page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="LoginPage.css" />
+  </head>
+  <body>
+    <div class="form_container">
+      <form action="/server">
+        <h1>Sign in</h1>
+        <div class="input-group flex-nowrap">
+          <label for="user" class="input-group-text" id="addon-wrapping"
+            ><i class="fa-solid fa-user"></i
+          ></label>
+          <input
+            type="text"
+            class="form-control"
+            id="user"
+            placeholder="Username"
+          />
+        </div>
+        <div class="input-group flex-nowrap">
+          <label for="pass" class="input-group-text" id="addon-wrapping"
+            ><i class="fa-solid fa-key"></i
+          ></label>
+          <input
+            type="password"
+            class="form-control"
+            id="pass"
+            placeholder="Password"
+          />
+        </div>
+        <button class="btn btn-lg">Login</button>
+        <div class="sign-up">
+          <a href="#" id="forgot">Forgot Password?</a>
+          <a href="signup.html" id="sign">Sign up</a>
+        </div>
+      </form>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    />
+  </body>
+</html>

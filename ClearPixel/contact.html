@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/ad72d1f3f0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body onload="generate()">
+    
+    <div class="cForm">
+        
+        <form>
+            <h1>Contact Us</h1>
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>&nbsp Your Name
+                <input type="text" id="name" placeholder="Enter your name"required>
+                <label for="name"></label>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-phone"></i>&nbsp Phone No.
+                <input type="number" id="ph-number" placeholder="Enter ph-number"required>
+                <label for="ph-number"></label>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>&nbsp Email Id
+                <input type="email" id="emailId" placeholder="Enter mail-id"required>
+                <label for="emailId"></label>
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-messages"></i>Your Message
+                <textarea id="message" rows="3" placeholder="Write your text"></textarea>
+                <label for="name"></label>
+            </div>
+            <div class="input-group">
+                <!-- <label for="captcha-input">Enter Captcha</label>
+                <div class="preview"></div>
+                <div class="captcha-form">
+                    <input type="text" id="captcha-form" placeholder="Enter captcha">
+                    <button class="captcha-refresh"><i class="fa fa-refresh"></i></button>
+                </div> -->
+                <!-- <label for="captcha-input">Enter Captcha</label>
+                <table>
+                    <tr>
+                        <td> <input type="text" id="captcha-form" placeholder="Enter captcha"></td>
+                        <td><label class="preview"></label></td>
+                        <td><button class="captcha-refresh"> <img src="/ref2.jpg" alt=""></button></td>
+                    </tr>
+                </table>
+            </div> -->
+            <div id="user-input" class="inline">
+                <label for="captcha-input">Enter Captcha</label>
+                <input type="text"
+                       id="submit"
+                       placeholder="Captcha code" />
+            </div>
+            <div id="image"
+                 class="inline"
+                 selectable="False"> <p id="st">Click refresh btn<br>to generate</p>
+            </div>
+            <div class="inline" onclick="generate()">
+                <button type="button" class="captcha-refresh"> <img src="/ref2.jpg" alt=""></button>
+            </div>
+            <input type="submit"
+                   id="btn"
+                   onclick="printmsg()" style=" background-color:#ee00ff" />
+         
+            <p id="key"></p>
+            <!-- <button type="submit">Submit</button> -->
+        </form>
+        <br><br><br>
+    </div>
+    <script src="captcha.js"></script>
+</body>
+</html>

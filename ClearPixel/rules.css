@@ -1,0 +1,90 @@
+
+.rules_container{
+    padding-top:3rem ;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    /* gap: 2rem; */
+    align-items: center;
+    background:#02040b;
+}
+h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    /* text-shadow: 2px 3px 5px rgb(196, 207, 32); */
+    /* letter-spacing: 2px; */
+}
+.middle{
+      
+    display: flex;
+    gap: 2.5rem;
+    justify-content:space-evenly;
+    align-items: center;
+    /* border: 2px solid red; */
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.des{
+    color: white;
+    max-height:100%;
+    max-width: 40%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
+
+.rule{
+    display: flex;
+    gap: 1.5rem;
+    /* border: 2px solid red; */
+}
+h3{
+    /* color:#26d5ec; */
+    font-size: 1.75rem;
+    font-weight:bold;
+    /* color:#00ccff; */
+    /* -webkit-text-stroke: 1px #F8F8F8; */
+    text-shadow: 4px 3px 2px blue;
+    /* background: linear-gradient(to bottom,rgb(20, 72, 218),#ffffff,blue);
+    -webkit-background-clip: text;
+    color: transparent; */
+}
+
+
+.imgp {
+    width: 40rem;
+    height: 25rem;
+    background-size: cover;
+ background-image: url("step-1.avif");
+}
+
+p{
+    line-height: 1.6rem;
+} 
+form a{
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ee00ff;
+    text-align: center;
+    padding: 1rem 2.5rem;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0, 204, 255,0.35);
+    border-radius: 0.5rem;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+form a:hover{
+    transform: scale(1.05);
+}

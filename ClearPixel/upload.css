@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--blue: #0071FF;
+	--light-blue: #B6DBF6;
+	--dark-blue: #005DD1;
+	--grey: #f2f2f2;
+}
+
+h1{
+    color:whitesmoke;
+    text-shadow: 2px 2px 2px #ee00ff;
+    font-size: 50px;
+}
+
+body {
+	display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background:#121212;
+}
+.main{
+     /* margin-top:-30px; */
+}
+
+
+.container {
+	max-width: 400px;
+	/* margin-top: 1rem; */
+	width: 100%;
+	background: #fff;
+	margin: 0 auto;
+	padding: 30px;
+	border-radius: 30px;
+	margin-top: 2rem;
+}
+.img-area {
+	position: relative;
+	width: 100%;
+	height: 240px;
+	background: var(--grey);
+	margin-bottom: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.img-area .icon {
+	font-size: 100px;
+}
+.img-area h3 {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+.img-area p {
+	color: #999;
+}
+.img-area p span {
+	font-weight: 600;
+}
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: 100;
+}
+.img-area::before {
+	content: attr(data-img);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+	z-index: 200;
+}
+.img-area.active:hover::before {
+	opacity: 1;
+}
+.select-image {
+	display: block;
+	width: 100%;
+	padding: 16px 0;
+	border-radius: 15px;
+	/* background: var(--blue); */
+	background-color: #ee00ff;
+	color: #fff;
+	font-weight: 500;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: all .3s ease;
+}
+.select-image:hover {
+	/* background: var(--dark-blue); */
+	background-color: #c500d7;
+}
+
+
+
+.nav_section{
+    width: 100%;
+    background-color: #0c1022;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 5rem;
+    position: fixed;
+    top: 0;
+	left: 0;
+    z-index: 5;
+}
+.nav_logo{
+    display: flex;
+    align-items: center;
+}
+.nav_logo h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 0 gray;
+    
+}
+.nav_logo h1 .clear{
+    color: #ee00ff;
+}
+.nav_logo h1 .pixel{
+    color: #00ccff;
+}
+.nav_items{
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+.nav_items ul{
+    display: flex;
+    gap: 4rem;
+    margin: 0;
+ 
+}
+.nav_items ul li{
+    list-style: none;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 0.25rem transparent solid;  
+    transition: border 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+	white-space: nowrap;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+}
+.nav_items li:hover{
+    border-bottom: 0.25rem #00ccff solid;
+    transition: border 0.2s linear;
+}
+.nav_items a{
+    color: white;
+    text-decoration: none;
+}
+.dropdown_menu{
+    display: none;
+	z-index: 5;
+}
+.nav_items ul li:hover .dropdown_menu{
+    display: block;
+    position: absolute;
+    left: -1.6rem;
+    top: 100%;
+    background-color: #0c1022;
+    box-shadow: 2px 2px 8px #0c1022;
+}
+.dropdown_menu ul{
+    display: block;
+    margin: 10px;
+    padding: 0;
+    
+}
+.dropdown_menu ul li{
+    width: 8rem;
+}
+.login{
+    display: flex;
+    gap: 1rem;
+}
+.log{
+    background-color: #040717;
+    color: #00ccff;
+    border: 2px solid #00ccff;
+    /* padding-bottom: 8px; */
+    transition: all 0.2s linear ;
+    
+}
+.log:hover{
+    background-color: #00ccff;
+    color: #040717;
+    transform: scale(1.1);
+}
+.sign{
+    background-color: #00ccff;
+    font-weight: 500;
+    border: 2px solid #00ccff;
+    transition: all 0.2s linear ;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sign:hover{
+    background-color: #00ccff;
+    color: #040717;
+    transform: scale(1.1);
+}

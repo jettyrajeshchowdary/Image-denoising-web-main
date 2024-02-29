@@ -1,0 +1,196 @@
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c1022;
+
+}
+.form_container{
+    /* height: 400px;
+    width: 370px;
+    max-height: 400px;
+    max-width: 370px;
+    border-radius: 50px 5px;
+    background-color: #040717;
+    position: relative;
+    overflow: hidden; */
+    position: relative;
+      width: 400px;
+      height: 470px;
+      max-width: 400px;
+      max-height: 470px;
+      background: #040717;
+      border-radius: 50px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 70px;
+      transition: all 0.5s linear ;
+}
+.form_container::before{
+    /* content: "";
+    height: 400px;
+    width: 370px;  
+    background-image: linear-gradient(60deg,transparent,#ee00ff,#ee00ff);
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite; */
+    position: absolute;
+      width: 170%;
+      height: 170%;
+      content: '';
+      background-image: conic-gradient(transparent, transparent, transparent, #ee00ff);
+      animation: animate 6s linear infinite;
+}
+.form_container::after{
+    /* content: "";
+    height: 400px;
+    width: 370px;  
+    background-image: linear-gradient(60deg,transparent,#00ccff,#00ccff);
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    transform-origin: bottom right;
+    animation: animate 6s linear -3s infinite; */
+    position: absolute;
+      width: 170%;
+      height: 170%;
+      content: '';
+      background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+      animation: animate 6s linear infinite;
+      animation-delay: -3s;
+
+}
+
+.form_container:hover{
+    background-color: black;
+    box-shadow: 0 0 20px #ee00ff;
+}
+.form_container:hover form{
+
+    box-shadow: inset 0 0 20px #00ccff;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+form{
+    position: absolute;
+    border-radius: 50px 5px;
+    background-color: #0c1022;
+    inset: 5px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column  ;
+    justify-content: space-evenly;
+    color: #00ccff;
+    align-items: center;
+    transition: all 0.5s linear ;
+    /* position: absolute;
+      content: '';
+      background-color: #0c1022;
+      border-radius: 50px 5px;
+      inset: 3px;
+      padding: 50px 40px;
+      z-index:2;
+      color: #00ccff; */
+}
+
+.input-group{
+    
+    width: 80%;
+    border-radius: 5px;
+    transition: all 0.2s linear ;
+    
+}
+.input-group:hover{
+    box-shadow: 0 0 10px #00ccff;
+}
+.input-group:hover  .form-control{
+    box-shadow: inset 0 0 10px #ee00ff;
+}
+.input-group:hover  .input-group-text{
+    box-shadow: inset 0 0 10px #ee00ff;
+}
+.form-control{
+    background-color: #040717;
+    border: 1px solid #ee00ff;
+    padding: 0.8rem;
+    transition: all 0.2s linear ;
+ 
+}
+#user{
+    color: white;
+}
+#pass{
+    color: white;
+}
+.form-control:focus{
+background-color: black;
+border: 1px solid #ee00ff;
+}
+
+.form-control::placeholder{
+    color: #00ccff;
+}
+.input-group-text{
+    background-color: #040717;
+    border: 1px solid #ee00ff;
+    color: #00ccff;
+    padding: 0.8rem;
+    transition: all 0.2s linear ;
+}
+.form-control:focus + label{
+    background-color: black;
+    border: 1px solid #ee00ff;
+    }
+.btn{
+    background-color: #040717;
+    color: #00ccff;
+    border: 1px solid #ee00ff;
+    padding-bottom: 8px;
+    width: 18rem;
+    transition: all 0.2s linear ;
+}
+.btn:hover{
+    background-color: #00ccff;
+    color: #040717;
+    box-shadow: 0 0 8px#ee00ff;
+    transform: scale(1.1);
+}
+.sign-up{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+
+}
+#forgot{
+    color: #373737;
+}
+#sign{
+    color: #00ccff;
+    font-weight: 700;
+    font-size: larger;
+    transition: all 0.1s linear ;
+}
+#sign:hover{
+    text-shadow: 0 0 1px white;
+}

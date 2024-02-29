@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Input Image With Preview Image</title>
+</head>
+<body>
+    <header>
+        <nav class="nav_section">
+            <div class="nav_logo">
+                <h1><span class="clear">Clear</span><span class="pixel">Pixel</span></h1>
+            </div>
+            <div class="nav_items">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a class="toggle" href="#">Denoising <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown_menu display">
+                            <ul>
+                                <li><a href="#">Spatial</a></li>
+                                <li><a href="#">Linear</a></li>
+                                <li><a href="#">Mean</a></li>
+                                <li><a href="#">Weiner</a></li>
+                                <li><a href="#">Non Linear</a></li>
+                                <li><a href="#">Median</a></li>
+                                <li><a href="#">Transform Domain</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+                <div class="login">
+                    <a href="login.html" target="_blank" class="btn log">Login</a>
+                    <a href="signup.html" target="_blank" class="btn sign">Sign Up</a>    
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <div class="main">
+        <h1>Upload Your Image Here</h1>
+	    <div class="container">
+		    <input type="file" id="file" accept="image/*" hidden>
+		    <div class="img-area" data-img="">
+			    <i class='bx bxs-cloud-upload icon'></i>
+			    <h3>Upload Image</h3>
+			    <p>Image size must be less than <span>2MB</span></p>
+		    </div>
+		    <button class="select-image">Select Image</button>
+	    </div>
+    </div>
+	
+	
+	<script src="upload.js"></script>
+</body>
+</html>
